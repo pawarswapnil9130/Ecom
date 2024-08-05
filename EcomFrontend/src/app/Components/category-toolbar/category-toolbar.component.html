@@ -1,0 +1,17 @@
+<nav>
+    <ul class="navbar">
+      <li *ngFor="let category of categories"
+          (mouseenter)="onMouseEnter(category.categoryId)" 
+          (mouseleave)="onMouseLeave()">
+        <img [src]="category.imagePath" alt="{{ category.categoryName }}" width="50" height="50">
+        <a>{{ category.categoryName }}</a>
+        <ul class="subcategory-list">
+          <li *ngFor="let subcategory of subCategories" class="subcategory-item">
+            {{ subcategory.subcategoryName }}
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+ 
+  

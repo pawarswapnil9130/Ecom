@@ -1,0 +1,80 @@
+mat-toolbar {
+    display: flex;
+    justify-content: space-between; /* Space between left and right items */
+    align-items: center; /* Center items vertically */
+    background-color: #ffffff; /* White background color */
+
+  }
+  
+  .example-spacer {
+    flex: 1; /* Pushes content to the right */
+  }
+  
+  .right-side {
+    display: flex;
+    align-items: center; /* Aligns search bar and buttons vertically */
+  }
+  
+  .search-field {
+    width: 250px; /* Adjust width as needed */
+    margin: 0 16px; /* Space around the search field */
+  }
+  
+  .search-container {
+    display: flex; /* Align elements horizontally */
+    align-items: center; /* Center align vertically */
+    height: 2px;
+    margin: auto;
+
+  }
+  
+  .search-container input {
+    padding: 8px; /* Padding inside the input field */
+    height: 5px;
+  }
+  
+  .search-container button {
+    margin-left: -1px; /* Overlap search button slightly to the left */
+  }
+  
+  mat-form-field {
+    border-radius: 4px; /* Rounded corners */
+    background-color: #ffffff; /* Background color */
+    height: 40px; /* Adjust height as needed */
+  }
+  
+  mat-form-field .mat-form-field-flex {
+    padding: 0; /* Remove padding inside form field */
+  }
+  
+  mat-form-field .mat-form-field-infix {
+    padding: 0; /* Remove padding inside input */
+  }
+  
+  mat-form-field .mat-form-field-label {
+    color: #555; /* Slightly darker label color */
+  }
+  
+  .mat-icon-button {
+    color: #007bff; /* Primary color for icon button */
+  }
+  
+  .mat-icon-button:hover {
+    background-color: rgba(0, 123, 255, 0.1); /* Light blue background on hover */
+    border-radius: 50%; /* Rounded icon button */
+  }
+  .logo-container {
+    display: flex;
+    align-items: center; /* Vertically center the logo and text */
+  }
+  
+  .logo {
+    height: 40px; /* Adjust height as needed */
+    width: auto;  /* Maintain aspect ratio */
+    margin-right: 8px; /* Space between logo and text */
+  }
+  
+  .logo-text {
+    font-size: 24px; /* Adjust font size as needed */
+    font-weight: bold;
+  }
