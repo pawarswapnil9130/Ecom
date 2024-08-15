@@ -11,12 +11,25 @@ import { CommonModule } from '@angular/common';
 })
 export class CategoryToolbarComponent implements OnInit {
   categories: any[] = []; // Define the categories array
-  subCategories : any[] =[];
+  subCategories: any[] = [];
+  activeCategoryId: number | null = null;
+
   constructor(private http: HttpClient) {}
-  currentCategoryId: number | null = null;
 
   ngOnInit(): void {
     this.fetchDetails(); 
+  }
+
+  public toggleSubcategories(categoryId: number) {
+    if (this.activeCategoryId === categoryId) {
+      // If the clicked category is already active, hide it
+      this.activeCategoryId = null;
+      this.subCategories = [];
+    } else {
+      // If a different category is clicked, show its subcategories
+      this.activeCategoryId = categoryId;
+      this.fetchSubcategories(categoryId);
+    }
   }
 
   public fetchDetails() {
@@ -28,24 +41,11 @@ export class CategoryToolbarComponent implements OnInit {
     });
   }
 
-  public onMouseEnter(categoryId: number) {
-    console.log('Hovered category ID:', categoryId); 
-    this.currentCategoryId = categoryId;
-    this.fetchSubcategories(categoryId);
-  }
-
-  public onMouseLeave() {
-    this.currentCategoryId = null; 
-    this.subCategories = []; 
-  }
-
-  public fetchSubcategories(categoryId :number)
-  {
-
+  public fetchSubcategories(categoryId: number) {
     this.http.get(`https://localhost:7102/api/Category/GetSubCategoriesByCategoryId?categoryId=${categoryId}`)
-    .subscribe((resp :any)=>{
+      .subscribe((resp: any) => {
         console.log(resp);
         this.subCategories = resp;
-    })
+      });
   }
 }

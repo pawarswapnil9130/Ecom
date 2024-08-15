@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "KBPCPK3y7A5KDwaZc4PbmH8TXajRULkorESIIUm7J7DV7wCTQo5D4hIrv2P4ZH/cIRdcrPGFdIkCMLdytgnEcA==",
+  "dgSpecHash": "OPa0mOFmga8C6xIDOhdrt5ZPj/u4UeFjM5qd1Y3pPXgIN5ZuejeXVsmoj17pmKXhwlznRujqxga2hEDoRf5cRw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Admin\\Desktop\\NgLearn\\SportsStore\\EcomBackend\\EcomBackend\\EcomBackend.csproj",
+  "projectFilePath": "C:\\Users\\Admin\\Desktop\\NgLearn\\Ecom\\EcomBackend\\EcomBackend\\EcomBackend.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Admin\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

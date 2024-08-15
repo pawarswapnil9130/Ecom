@@ -1,37 +1,53 @@
+/* General Toolbar Styles */
 .category-toolbar {
   background-color: #f8f9fa;
   color: #343a40;
   padding: 10px 20px;
+  display: flex;
+  justify-content: center; /* Center toolbar items horizontally */
+  position: relative; /* For positioning child elements */
 }
 
+/* Category Item Styles */
 .category-item {
-  position: relative;
+  position: relative; /* Relative positioning for absolute child elements */
   margin: 0 15px;
   padding: 5px 10px;
   cursor: pointer;
   font-weight: bold;
+  transition: color 0.3s; /* Smooth color transition */
 }
 
-.category-item:hover .subcategory-list {
-  display: block;
+.category-item:hover {
+  color: #007bff; /* Change text color on hover */
 }
 
+/* Subcategory List Styles */
 .subcategory-list {
-
-   position: absolute; 
-  top: 100%;
-  left: 0;
-  background-color: #ed0e0e;
+  display: none; /* Hidden by default */
+  position: absolute;
+  top: 100%; /* Position below the category item */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Offset to center */
+  background-color: #2cb0f3;
   border: 1px solid #ddd;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   z-index: 1000;
   min-width: 200px;
+  border-radius: 8px; /* Rounded corners */
+  overflow: hidden; /* Hide overflowing content */
 }
 
+/* Show the subcategory list when active */
+.subcategory-list.active {
+  display: block; /* Show when active class is applied */
+}
+
+/* Subcategory Item Styles */
 .subcategory-item {
-  padding: 10px;
+  padding: 12px;
   border-bottom: 1px solid #f70606;
-  
+  transition: background-color 0.3s, color 0.3s; /* Smooth transitions */
 }
 
 .subcategory-item:last-child {
@@ -40,9 +56,10 @@
 
 .subcategory-item:hover {
   background-color: #5809df;
+  color: #fff; /* Change text color on hover */
 }
 
-/* Navbar styles */
+/* Navbar Styles */
 .navbar {
   list-style-type: none; 
   margin: 0;
@@ -55,6 +72,7 @@
   display: flex; 
   align-items: center; 
   justify-content: center; 
+  position: relative; /* For positioning subcategory lists */
 }
 
 .navbar li a {
@@ -63,6 +81,7 @@
   color: white;
   text-align: center; 
   text-decoration: none; 
+  transition: background-color 0.3s; /* Smooth transition on hover */
 }
 
 .navbar li a:hover {
@@ -76,3 +95,4 @@
   height: 50px; 
   object-fit: cover; 
 }
+

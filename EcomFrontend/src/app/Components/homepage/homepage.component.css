@@ -6,6 +6,12 @@ mat-toolbar {
 
   }
   
+  .cart-icon {
+    color: #4caf50; /* Example color for the cart icon (green) */
+  }
+  .Accout-icon {
+    color: #ff5722; /* Example color for the account icon (orange) */
+  }
   .example-spacer {
     flex: 1; /* Pushes content to the right */
   }
