@@ -12,7 +12,7 @@ namespace EcomBackend.Context
         public DbSet<Category> Categories { get; set; }
         public DbSet<Subcategory> SubCategories { get; set; }
 
-        public DbSet<Banner> Banners { get; set; }
+        //public DbSet<Banner> Banners { get; set; }
 
     }
 }

@@ -24,7 +24,7 @@ namespace EcomBackend
                     builder => builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
             });
             builder.Services.AddScoped<CategoryService>();
-            builder.Services.AddScoped<BannerService>();
+            //builder.Services.AddScoped<BannerService>();
             var app = builder.Build();
             
             // Configure the HTTP request pipeline.
